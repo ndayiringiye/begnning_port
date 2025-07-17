@@ -1,4 +1,3 @@
-import { ThemeProvider } from './Components/ThemeToggle';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import About from './Components/About';
@@ -10,12 +9,12 @@ import Testimonials from './Components/Testimonials';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from "./Components/ThemeToggle";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <ThemeProvider>
-        <div className="bg-light dark:bg-secondary transition-colors duration-300">
+        <div className="bg-light dark:bg-secondary transition-colors duration-300 min-h-screen w-11/12 mx-auto">
           <Header />
           <Home />
           <About />
@@ -27,7 +26,6 @@ const App = () => {
           <Contact />
           <Footer />
         </div>
-      </ThemeProvider>
     </BrowserRouter>
   );
 };
